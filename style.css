@@ -18,10 +18,6 @@
     box-sizing: border-box;
 }
 
-html{
-    scroll-behavior: smooth;
-}
-
 body{
     background-color:  var(--bgSapphBlue);
     color: lightblue;
@@ -101,6 +97,7 @@ hr.c-hor-rule{
     scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
+    scroll-behavior: smooth;
 }
 
 .c-scroll-snap-child{
@@ -109,7 +106,7 @@ hr.c-hor-rule{
 
 .c-spacer{
     min-height: 25vh;
-    background-color: yellow;
+    //background-color: yellow;
     opacity: 50%;
 }
 
@@ -139,7 +136,6 @@ hr.c-hor-rule{
     z-index : 10000;
 }
 
-/* Apply filter effect here for liquid dots */
 .c-nav-ul{
     display: flex;
     flex-direction: column;
@@ -150,81 +146,73 @@ hr.c-hor-rule{
     margin: 0 auto ;
 }
 
-.c-nav-ul a{
-    text-decoration: none;
-    color: white;
-    opacity:85%;
-    font-family: acumin-pro, sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    letter-spacing: 1px;
-}
-
-.c-nav-ul svg{
-    fill: white;
-    height: 15px;
-    width: 15px;
-    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
-}
-
-.c-svg-container:hover{
-    transform: scale(1.35);
-    opacity: 100%;
-    border-color: cornflowerblue;
-}
-
-.c-svg-container:hover svg{
-    opacity: 100%;
-    fill: cornflowerblue;
-}
-
-
-.c-svg-container{
+/* Background for each 'Major' dot */
+.c-svg-container-overlay{
     margin: 2px auto;
     border-radius: 50%;
     border: 1px solid white;
     height: 24px;
     width: 24px;
-    opacity: 25%;
+    background-color: var(--bgSapphBlue);
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: none;
     transition:  transform 0.25s ease-out, opacity 0.25s ease-out, background-color 0.5s ease-out;
 }
+    /* Change color & expand on hover, svg changes and expands as well */
+    .c-svg-container-overlay:hover{
+        transform: scale(1.35);
+        border-color: cornflowerblue;
+    }
 
-.c-svg-selected svg{
-    fill-opacity: 100%;
-    height: 25px;
-    width: 25px;
-    fill: var(--bgSapphBlue);
+    .c-svg-container-overlay:hover .c-major-dot{
+        transform: scale(1.35);
+    }
+
+    .c-svg-container-overlay:hover svg{
+        opacity: 100%;
+        fill: cornflowerblue;
+    }
+        /* When selected DO NOT Change color & expand on hover */
+        .c-svg-container-overlay.c-svg-selected{
+            height: 30px;
+            width: 30px;
+            opacity: 80%;
+            background-color: white;
+        }
+        
+        .c-svg-container-overlay.c-svg-selected:hover{
+            background-color: white;
+            transform: scale(1);
+            border-color: white;
+        }
+
+
+/* Inner Icon for each 'Major' dot */
+.c-nav-ul svg{
+    fill: white;
+    height: 15px;
+    width: 15px;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
+    /* inner icon should expand from 15 to 25 when not selected */
+    .c-svg-selected svg{
+        height: 25px;
+        width: 25px;
+        fill: var(--bgSapphBlue);
+    }
+        /* when not selected  inner icon size should not change */
+        .c-svg-container-overlay.c-svg-selected:hover svg{
+            fill: var(--bgSapphBlue);
+        }
 
-.c-svg-container.c-svg-selected{
-    height: 30px;
-    width: 30px;
-    opacity: 80%;
-    background-color: white;
-}
 
-.c-svg-container.c-svg-selected:hover{
-    opacity: 80%;
-    background-color: white;
-    transform: scale(1);
-    border-color: white;
-}
-
-.c-svg-container.c-svg-selected:hover svg{
-    fill-opacity: 100%;
-    fill: var(--bgSapphBlue);
-}
-
-.c-dots{
-    background-color: white;
-    opacity: 25%;
-    height: 5px;
-    width: 5px;
-    border-radius: 50%;
+/* spacer dots*/
+.c-dots-overlay{
+    opacity: 100%;
+    height: 7px;
+    width: 7px;
     margin: 10px auto;
 }
 
@@ -239,6 +227,106 @@ hr.c-hor-rule{
 @media only screen and (min-width: 992px) {
     .c-nav-container{
         width: 7em;
+    }
+}
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            NAV BAR EFFECTS             */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+.c-filter{
+    filter:url(#liquid);
+}
+
+.c-dots{
+    position: relative;
+    background-color: white;
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    margin: 10px auto;
+    transform: translateY(-2px);
+}
+
+    .c-dots:before{
+        content:'';
+        position: absolute;
+        top:-5px;
+        left:-5px;
+        right:-5px;
+        bottom:-5px;
+        background-color: white;
+        z-index: -1;
+        border-radius: 50%;
+        filter: blur(3px);
+    }
+
+
+.c-major-dot{
+    height: 24px;
+    width: 24px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 2px auto;
+    border: 1px solid white;
+    transform: translateY(-2px);
+}
+
+    .c-major-dot::before{
+        content:'';
+        position: absolute;
+        top:-5px;
+        left:-5px;
+        right:-5px;
+        bottom:-5px;
+        background-color: white;
+        z-index: -1;
+        border-radius: 50%;
+        filter: blur(3px);
+    }
+
+    .c-major-dot.c-svg-selected{
+        height: 30px;
+        width: 30px;
+    }
+
+
+.c-dot-move{
+    position: relative;
+    border-radius: 50%;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    left: 50%;
+    transform: translate(-50%, -250px);
+    animation: moving 15s linear infinite;
+}
+    .c-dot-move:before{
+        content:'';
+        position: absolute;
+        top:-5px;
+        left:-5px;
+        right:-5px;
+        bottom:-5px;
+        background-color: white;
+        z-index: -1;
+        border-radius: 50%;
+        filter: blur(5px);
+    }
+
+@keyframes moving {
+    0%{
+        top:260px;
+    }
+    50%{
+        top:530px;
+    }
+    100%{
+        top:260px;
     }
 }
 
