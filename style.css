@@ -80,9 +80,29 @@ hr.c-hor-rule{
     opacity:80%;
 }
 
+.c-section-wrapper{
+    min-height: 100%;
+}
+
+.c-translate-up-sm-2{
+    transform: translateY(-2rem);
+}
+
+.c-height{
+    min-height: 100vh;
+    height: 200vh;
+    max-height: 2000px;
+}
 
 
 
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+
+    .c-translate-up-sm-2{
+        transform: translateY(-1rem);
+    }
+}
 
 /* ====================================== */
 /* ====================================== */
@@ -119,6 +139,15 @@ hr.c-hor-rule{
 /* ====================================== */
 
 /* MOBILE: If the browser window is smaller than 768px */
+.c-image-holder{
+    background-color: none;
+    border: 2px solid white;
+    opacity: 95%;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+
 
 .c-separator{
     display: none;
@@ -147,6 +176,15 @@ hr.c-hor-rule{
 
 /* TABLET: If the browser window is 768px or larger (For text adjustment)*/
 @media only screen and (min-width: 768px) {
+    .c-image-holder{
+        background-color: none;
+        border: 2px solid white;
+        opacity: 95%;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+    }
+
     .c-section-container{
         max-width: 400px;
     }
