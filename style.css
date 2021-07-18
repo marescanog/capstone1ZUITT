@@ -332,9 +332,20 @@ hr.c-hor-rule{
 /* ====================================== */
 
 /* MOBILE: If the browser window is smaller than 768px */
+.push-right{
+    width: 95%;
+    margin-left: 5%;
+}
+.c-photo{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    border: 2px solid white;
+}
+
 .c-image-holder{
     background-color: none;
-    border: 2px solid white;
+    //border: 2px solid white;
     opacity: 95%;
     height: 100px;
     width: 100px;
@@ -372,11 +383,18 @@ hr.c-hor-rule{
 @media only screen and (min-width: 768px) {
     .c-image-holder{
         background-color: none;
-        border: 2px solid white;
+        //border: 2px solid white;
         opacity: 95%;
         height: 150px;
         width: 150px;
         border-radius: 50%;
+    }
+
+    .c-photo{
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        border: 2px solid white;
     }
 
     .c-section-container{
@@ -548,5 +566,8 @@ hr.c-hor-rule{
 
 /* DESKTOP: If the browser window is 992px or larger */
 @media only screen and (min-width: 992px) {
-
+    #gmap_canvas{
+        width: 100%;
+        height: 40vh;
+    }
 }
