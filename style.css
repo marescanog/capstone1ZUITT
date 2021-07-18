@@ -10,7 +10,7 @@
 
 :root {
     --bgSapphBlue: #08244B;
-    // var(--bgBlue);
+    // var(--bgSapphBlue);
 }
 
 *{
@@ -117,11 +117,12 @@ hr.c-hor-rule{
 .c-nav-ul{
     position: fixed;
     list-style-type: none;
-    padding-left: 1em;
+    padding-left: 0.65em;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index : 10000;
 }
 
 .c-nav-ul a{
@@ -136,21 +137,61 @@ hr.c-hor-rule{
 
 .c-nav-ul svg{
     fill: white;
-    fill-opacity: 25%;
     height: 15px;
     width: 15px;
-    margin-bottom: 5px;
+    transition: transform 0.25s ease-out, opacity 0.25s ease-out;
 }
 
-.c-svg-container::after{
-    content: '';
-    position: absolute;
+.c-svg-container:hover{
+    transform: scale(1.35);
+    opacity: 100%;
+    border-color: cornflowerblue;
+}
+
+.c-svg-container:hover svg{
+    opacity: 100%;
+    fill: cornflowerblue;
+}
+
+
+.c-svg-container{
+    margin: 2px auto;
     border-radius: 50%;
     border: 1px solid white;
-    transform: translate(-20px,1px);
     height: 24px;
     width: 24px;
     opacity: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    transition:  transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+.c-svg-selected svg{
+    fill-opacity: 100%;
+    height: 25px;
+    width: 25px;
+    fill: var(--bgSapphBlue);
+}
+
+.c-svg-container.c-svg-selected{
+    height: 30px;
+    width: 30px;
+    opacity: 80%;
+    background-color: white;
+}
+
+.c-svg-container.c-svg-selected:hover{
+    opacity: 80%;
+    background-color: white;
+    transform: scale(1);
+    border-color: white;
+}
+
+.c-svg-container.c-svg-selected:hover svg{
+    fill-opacity: 100%;
+    fill: var(--bgSapphBlue);
 }
 
 .c-dots{
@@ -159,7 +200,14 @@ hr.c-hor-rule{
     height: 5px;
     width: 5px;
     border-radius: 50%;
-    margin: 5px auto;
+    margin: 10px auto;
+}
+
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+    .c-nav-ul{
+        padding-left: 2.5em;
+    }
 }
 
 
