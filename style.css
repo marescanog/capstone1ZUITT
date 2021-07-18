@@ -1,0 +1,189 @@
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            GENERAL STYLES              */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 768px */
+
+:root {
+    --bgSapphBlue: #08244B;
+    // var(--bgBlue);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color:  var(--bgSapphBlue);
+    color: lightblue;
+}
+
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+main{
+    width: 100vw;
+    color: rgb(197, 228, 238);
+    z-index: 99;
+    width: 100%;
+    position: absolute;
+    font-family: komet, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+
+h1, h2, h3, p {
+    color: white;
+    opacity:85%;
+    font-style: normal;
+}
+
+h1{
+    font-family: reross-rectangular, sans-serif;
+    font-weight: 400;
+}
+
+h2{
+    font-family: acumin-pro, sans-serif;
+    font-weight: 700;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+hr.c-hor-rule{
+    border: 1px solid white;
+    border-bottom: 1px solid rgba(255,255,255,1);
+    opacity:80%;
+}
+
+
+
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            NAV BAR STYLES              */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 768px */
+
+.c-nav-ul{
+    position: fixed;
+    list-style-type: none;
+}
+
+.c-nav-ul a{
+    text-decoration: none;
+    color: white;
+    opacity:85%;
+    font-family: acumin-pro, sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    letter-spacing: 1px;
+}
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            SECTION START               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 768px */
+
+.c-separator{
+    display: none;
+}
+
+.c-section-container{
+    max-width: 200px;
+}
+
+.c-section-container p{
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.c-section-container h3{
+    font-size: 1rem;
+}
+
+.c-p-extension{
+    display: none;
+}
+
+.c-section-container p {
+    font-size: .6rem;
+}
+
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+    .c-section-container{
+        max-width: 400px;
+    }
+
+    .c-separator{
+        display: block;
+    }
+
+    .c-section-container h3{
+        font-size: 1.5rem;
+    }
+
+    .c-section-container p {
+        max-width: 300px;
+        margin: auto;
+        font-size: .75rem;
+    }
+
+}
+
+/* DESKTOP: If the browser window is 992px or larger */
+@media only screen and (min-width: 992px) {
+    .c-section-container{
+        max-width: 510px;
+    }
+
+    .c-separator{
+        display: inline;
+    }
+
+    .c-p-extension{
+        display: inline;
+    }
+
+    .c-section-container p {
+        max-width: none;
+    }
+
+    
+}
