@@ -94,7 +94,7 @@ hr.c-hor-rule{
 }
 
 .c-scroll-snap-container{
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;

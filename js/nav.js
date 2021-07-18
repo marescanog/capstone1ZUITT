@@ -9,9 +9,8 @@ var majorDots = document.getElementsByClassName("c-major-dot");
 var movingDot = document.getElementById("moving-dot");
 var scrollContainer = document.getElementById("scroll-container");
 
-
 var scrollElements = document.getElementsByClassName("c-scroll-snap-child");
-console.log(scrollElements[1].scrollTop);
+
 
 function setSelected(navType){
     for(var x = 0; x < navs.length; x++){
@@ -72,7 +71,7 @@ scrollContainer.addEventListener('scroll', () =>{
     const currentDotPostion = movingDot.getBoundingClientRect().top;
     if(currentDotPostion < navStartTopVal+35){
         if(currentDotNo != 0){
-            console.log("First Dot!");
+            //console.log("First Dot!");
             currentDotNo=0;
             setSelected(currentDotNo);
         }
@@ -80,7 +79,7 @@ scrollContainer.addEventListener('scroll', () =>{
 
     if(currentDotPostion > navProjectTopVal-10 && currentDotPostion < (navProjectTopVal+30)){
         if(currentDotNo != 1){
-            console.log("Second Dot!");
+            //console.log("Second Dot!");
             currentDotNo=1;
             setSelected(currentDotNo);
         }
@@ -88,7 +87,7 @@ scrollContainer.addEventListener('scroll', () =>{
 
     if(currentDotPostion > navToolsTopVal-10 && currentDotPostion < (navToolsTopVal+30)){
         if(currentDotNo != 2){
-            console.log("Third Dot!");
+            //console.log("Third Dot!");
             currentDotNo=2;
             setSelected(currentDotNo);
         }
@@ -96,7 +95,7 @@ scrollContainer.addEventListener('scroll', () =>{
 
     if(currentDotPostion > navContactTopVal-10){
         if(currentDotNo != 3){
-            console.log("Fourth Dot!");
+            //console.log("Fourth Dot!");
             currentDotNo=3;
             setSelected(currentDotNo);
         }
