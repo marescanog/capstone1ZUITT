@@ -461,9 +461,20 @@ hr.c-hor-rule{
     max-width: 200px;
 }
 
+    .c-projects-body p{
+       font-size: 0.8rem;
+       font-weight: bold
+    }
+
+    .c-projects-body h3{
+        font-size: 1.2rem;
+        font-weight: bold
+    }
+
     .c-card{
         max-width: 18rem;
         max-height: 350px;
+
     }
 
 /* S phones: If the browser window is 360px or larger (For text adjustment)*/
