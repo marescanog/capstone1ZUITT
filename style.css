@@ -94,7 +94,7 @@ hr.c-hor-rule{
 }
 
 .c-scroll-snap-container{
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     height: 100vh;
     scroll-behavior: smooth;
@@ -112,6 +112,10 @@ hr.c-hor-rule{
 
 /* TABLET: If the browser window is 768px or larger (For text adjustment)*/
 @media only screen and (min-width: 768px) {
+
+    .c-scroll-snap-container{
+        scroll-snap-type: y mandatory;
+    }
 
     .c-translate-up-sm-2{
         transform: translateY(-1rem);
@@ -144,6 +148,7 @@ hr.c-hor-rule{
     list-style-type: none; 
     padding: 0;
     margin: 0 auto ;
+   // max-height: 1000px;
 }
 
 /* Background for each 'Major' dot */
@@ -417,4 +422,131 @@ hr.c-hor-rule{
     }
 
     
+}
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            PROJECTS START               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* XS phones: If the browser window is smaller than 768px */
+
+.c-projects-header{
+    max-width: 225px;
+}
+
+.c-projects-body{
+    max-width: 200px;
+}
+
+    .c-card{
+        max-width: 18rem;
+        max-height: 350px;
+    }
+
+/* S phones: If the browser window is 360px or larger (For text adjustment)*/
+@media only screen and (min-width: 360px) {
+    .c-projects-body{
+        max-width: 250px;
+    }
+}
+
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+    .c-projects-header{
+        min-width: 415px;
+    }
+
+    .c-projects-body{
+        max-width: 50rem;
+    }
+}
+
+/* DESKTOP: If the browser window is 992px or larger */
+@media only screen and (min-width: 992px) {
+    .c-projects-header{
+        min-width: 500px;
+    }
+
+    .c-projects-body{
+        width: 60rem;
+        //background-color: aqua;
+    }
+}
+
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            TOOLS START               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 768px */
+
+// .c-projects-header{
+//     max-width: 225px;
+// }
+
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+    // .c-projects-header{
+    //     max-width: 225px;
+    // }
+}
+
+/* DESKTOP: If the browser window is 992px or larger */
+@media only screen and (min-width: 992px) {
+    // .c-projects-header{
+    //     max-width: 225px;
+    // }
+}
+
+
+/* ====================================== */
+/* ====================================== */
+/*                                        */
+/*            CONTACT START               */
+/*                                        */
+/* ====================================== */
+/* ====================================== */
+
+/* MOBILE: If the browser window is smaller than 768px */
+
+#gmap_canvas{
+	width: 100%;
+    height: 40vh;
+}
+
+.footer-adjustment p{
+   font-size: small;
+}
+
+
+/* TABLET: If the browser window is 768px or larger (For text adjustment)*/
+@media only screen and (min-width: 768px) {
+    .form-height{
+        max-height: 300px;
+        height: 45vh;
+    }
+
+    .push-up{
+        transform: translateY(-65px);
+    }
+
+    #gmap_canvas{
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+/* DESKTOP: If the browser window is 992px or larger */
+@media only screen and (min-width: 992px) {
+
 }

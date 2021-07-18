@@ -116,14 +116,36 @@
             </section>
             <div class="c-spacer"></div>
             <div class="c-spacer"></div>
-            <div class="c-spacer"></div>
+            <div class="c-spacer"></div><div class="c-spacer"></div><div class="c-spacer"></div><div class="c-spacer"></div>
             <section class="row min-vh-100 c-scroll-snap-child">
-                <div class="col c-section-wrapper d-flex flex-column justify-content-center">
-                    <div class="c-section-container mx-auto">
-                        <h2 id="projects">PROJECTS</h2>
+                <div  class="col c-section-wrapper d-flex flex-column justify-content-center">
+                    <div class="c-projects-header mx-auto mb-2">
+                        <h2 id="projects" class="pt-5">PROJECTS</h2>
+                        <hr class="m-0 mb-2 c-hor-rule">
+                        <p>A collection of Marvie's latest works</p>
                     </div>
-                    <div class="c-section-container mx-auto">
-
+                    <div class="c-projects-body mx-auto d-md-flex">
+                        <div class="card c-card " >
+                            <img class="card-img-top img-fluid" src="./images/projects/website.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h3 class="card-text text-dark">Cebu Pet Match Website</h3>
+                              <p class="text-dark">Developed with PHP, MySql, Javascript, Jquery, HTML and CSS. An Online Pet Search Database.</p>
+                            </div>
+                        </div>
+                        <div class="card c-card mx-md-4 mt-4 mt-md-0">
+                            <img class="card-img-top img-fluid" src="./images/projects/website2.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h3 class="card-text text-dark">Healthy Eats Website</h3>
+                              <p class="text-dark">Front-End focused using HTML, CSS and Javascript. An online order form submisison website. </p>
+                            </div>
+                        </div>
+                        <div class="card c-card mt-4 mt-md-0">
+                            <img class="card-img-top img-fluid" src="./images/projects/spaceshooter.jpg" alt="Card image cap">
+                            <div class="card-body">
+                              <h3 class="card-text text-dark">Space Shooter</h3>
+                              <p class="text-dark">Programmed with C# and developed in Unity. This links to a video demo of the space shooter game.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -132,27 +154,64 @@
             <div class="c-spacer"></div>
             <section class="row min-vh-100 c-scroll-snap-child">
                 <div class="col c-section-wrapper d-flex flex-column justify-content-center">
-                    <div class="c-section-container mx-auto">
-                        <h2 id="tools">TOOLS</h2>
+                    <div class="c-projects-header mx-auto">
+                        <h2 id="tools" class="pt-1">TOOLS</h2>
+                        <hr class="m-0 mb-2 c-hor-rule">
+                        <p>Languages and Frameworks</p>
                     </div>
-                    <div class="c-section-container mx-auto">
-
+                    <div class="c-projects-body mx-auto">
+                        <img src="./images/logo-html5.png" alt="HTML 5 logo" style="width:80px">
+                        <img src="./images/logo-css3.png" alt="css3 logo" style="width:80px">
+                        <img src="./images/logo-javascript.png" alt="javascript logo" style="width:80px">
+                        <img src="./images/logo-mongodb.png" alt="mongodb logo" style="width:80px">
+                        <img src="./images/logo-nodejs.png" alt="nodejs logo" style="width:80px">
+                        <img src="./images/logo-expressjs.png" alt="expressjs logo" style="width:80px">
+                        <img src="./images/logo-react.png" alt="react logo" style="width:80px">
+                        <img src="./images/logo-heroku.png" alt="heroku logo" style="width:80px">
+                        <img src="./images/logo-git.png" alt="git logo" style="width:80px">
+                        <img src="./images/logo-sublime-text-3.png" alt="sublime-text-3 logo" style="width:80px">
+                        <img src="./images/logo-postman.png" alt="postman logo" style="width:80px">
+                        <img src="./images/logo-gitlab-ci-cd.png" alt="gitlab-ci-cd logo" style="width:80px">
                     </div>
                 </div>
             </section>
             <div class="c-spacer"></div>
             <div class="c-spacer"></div>
-            <div class="c-spacer"></div>
-            <section class="row min-vh-100 c-scroll-snap-child">
-                <div class="col c-section-wrapper d-flex flex-column">
-                    <div class="c-section-container mx-auto">
-                        <h2 id="contact">CONTACT</h2>
+            <section class="row min-vh-100 c-scroll-snap-child push-up">
+                <div class="col c-section-wrapper d-flex flex-column justify-content-center">
+                    <div class="c-projects-header mx-auto push-up">
+                        <h2 class="pt-2">CONTACT</h2>
+                        <hr class="m-0 mb-2 c-hor-rule">
+                        <p > View my general location or send me a Message!</p>
                     </div>
-                    <div class="c-section-container mx-auto">
-
+                    <div  id="contact" class="row c-projects-body mx-auto form-height mt-md-3">
+                        <div class="col-md-6 mt-2 push-up" >
+                            <iframe id="gmap_canvas" src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                        </div>
+                        <div class="col-md-6 mt-2 my-2 push-up">
+                            <form action="" class="text-left">
+                                <div class="form-group">
+                                    <label for="full-name-input">Full Name</label>
+                                    <input type="text" name="" id="full-name-input" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-input">Email Address</label>
+                                    <input type="email" name="" id="email-input" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="txt-txtarea">Message</label>
+                                    <textarea name="textArea" id="txt-textarea" rows="5" class="form-control"></textarea>
+                                </div>
+                                <button class="btn btn-success btn-block mt-3">Send</button>
+                            </form>
+                        </div>
+                        <footer   class="p-2 mt-2 c-projects-body mx-auto footer-adjustment my-2 push-up">
+                            <hr class="m-0 mb-2 c-hor-rule">
+                            <p class="text-center text-light m-0">Marvie Gasataya</p>
+                            <p class="text-center text-light m-0">All Rights Reserved.</p>
+                        </footer>
                     </div>
                 </div>
-            </section>
     </main>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script> -->
     <!-- <script type="module" src="./main.js"></script> -->
