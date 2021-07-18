@@ -1,12 +1,8 @@
-var navStart = document.getElementById("nav-start");
-var navProject = document.getElementById("nav-projects");
-var navTools = document.getElementById("nav-tools");
-var navContact = document.getElementById("nav-contact");
+var navStartTopVal = document.getElementById("nav-start").getBoundingClientRect().top;
+var navProjectTopVal = document.getElementById("nav-projects").getBoundingClientRect().top;
+var navToolsTopVal = document.getElementById("nav-tools").getBoundingClientRect().top;
+var navContactTopVal = document.getElementById("nav-contact").getBoundingClientRect().top;
 
-// console.log(navStart.getBoundingClientRect() );
-// console.log(navProject.getBoundingClientRect() );
-// console.log(navTools.getBoundingClientRect() );
-// console.log(navContact.getBoundingClientRect() );
 
 var navs = document.getElementsByClassName("c-svg-container-overlay");
 var majorDots = document.getElementsByClassName("c-major-dot");
@@ -39,11 +35,12 @@ function setSelected(navType){
     
 }
 
-
+// For detecting if scroll Up or down
 var lastScrollTop = 0;
 
-var oldDotPosition = movingDot.getBoundingClientRect().top;
-console.log(oldDotPosition);
+// For Detecting Dot change
+var currentDotNo = 0;
+
 /* Dot moves as ScrollBar moves */
 scrollContainer.addEventListener('scroll', () =>{
     const currentScrollValue = scrollContainer.scrollTop;
@@ -58,7 +55,6 @@ scrollContainer.addEventListener('scroll', () =>{
     const navBarAdd = currentScrollPercentage*260;
 
 
-//console.log(oldDotPosition + " + " + dotMoveValue + " =" );
     // find out if scrolling up or down
     if (currentScrollValue > lastScrollTop){
         // Scrolling Down
@@ -69,8 +65,55 @@ scrollContainer.addEventListener('scroll', () =>{
     }
     lastScrollTop = currentScrollValue;
 
-    
+    //console.log(movingDot.getBoundingClientRect().top);
+
+   
+    // Execute CSS Script when the moving dot touches a major dot
+    const currentDotPostion = movingDot.getBoundingClientRect().top;
+    if(currentDotPostion < navStartTopVal+35){
+        if(currentDotNo != 0){
+            console.log("First Dot!");
+            currentDotNo=0;
+            setSelected(currentDotNo);
+        }
+    }
+
+    if(currentDotPostion > navProjectTopVal-10 && currentDotPostion < (navProjectTopVal+30)){
+        if(currentDotNo != 1){
+            console.log("Second Dot!");
+            currentDotNo=1;
+            setSelected(currentDotNo);
+        }
+    }
+
+    if(currentDotPostion > navToolsTopVal-10 && currentDotPostion < (navToolsTopVal+30)){
+        if(currentDotNo != 2){
+            console.log("Third Dot!");
+            currentDotNo=2;
+            setSelected(currentDotNo);
+        }
+    }
+
+    if(currentDotPostion > navContactTopVal-10){
+        if(currentDotNo != 3){
+            console.log("Fourth Dot!");
+            currentDotNo=3;
+            setSelected(currentDotNo);
+        }
+    }
+
 });
+
+// NOTES FOR REFERENCE
+
+// var navStartTopVal = document.getElementById("nav-start").getBoundingClientRect().top;
+// var navProjectTopVal = document.getElementById("nav-projects").getBoundingClientRect().top;
+// var navToolsTopVal = document.getElementById("nav-tools").getBoundingClientRect().top;
+// var navContactTopVal = document.getElementById("nav-contact").getBoundingClientRect().top;
+
+
+// var oldDotPosition = movingDot.getBoundingClientRect().top;
+// console.log(oldDotPosition);
 //TOP
 //movingDot.style.top = "-40px";
 //BOTTOM
