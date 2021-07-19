@@ -565,6 +565,13 @@ hr.c-hor-rule{
    font-size: small;
 }
 
+.footer-adjustment svg:hover{
+    fill: cornflowerblue;
+}
+
+.c-buttones{
+    width: 100%;
+}
 
 /* TABLET: If the browser window is 768px or larger (For text adjustment)*/
 @media only screen and (min-width: 768px) {
