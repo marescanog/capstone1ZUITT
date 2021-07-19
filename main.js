@@ -222,4 +222,66 @@ scrollyBoi.onscroll = moveCamera;
 
     gsap.to(camera.position,{
       z: 3.5,
-    })
+    });
+
+    gsap.to('#myimg', {
+      opacity: 1,
+      duration: 1.5,
+      y: 0,
+      ease: 'expo'
+    });
+
+    gsap.to('#myName', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.3,
+      y: 0,
+      ease: 'expo'
+    });
+
+    gsap.to('#myHr', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.6,
+      y: 0,
+      ease: 'expo'
+    });
+
+    gsap.to('#mytitle', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.6,
+      y: 0,
+      ease: 'expo'
+    });
+
+    gsap.to('#myPgraf', {
+      opacity: 1,
+      duration: 1.5,
+      delay: 0.6,
+      y: 0,
+      ease: 'expo'
+    });
+
+
+
+
+  //   #myName{
+  //     opacity: 0;
+  // }
+  
+  // #myHr{
+  //     opacity: 0;
+  // }
+  
+  // #mytitle{
+  //     opacity: 0;
+  // }
+  
+  // #myPgraf{
+  //     opacity: 0;
+  // }
+  
+  // #myimg{
+  //     opacity: 0;
+  // }

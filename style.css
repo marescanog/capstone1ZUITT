@@ -597,3 +597,28 @@ hr.c-hor-rule{
         height: 40vh;
     }
 }
+
+#myName{
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+#myHr{
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+#mytitle{
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+#myPgraf{
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+#myimg{
+    opacity: 0;
+    transform: translateY(30px);
+}
